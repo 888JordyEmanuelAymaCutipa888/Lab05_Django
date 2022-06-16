@@ -1,7 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.short import render
 
 # Create your views here.
+def plantilla(request, *args, **kwargs):
+    print(args, kwargs)
+    print(request.user)
+    return render(request, 'home.html', {})
+
 def argumentsView(request, *args, **kwargs):
     print(args, kwargs)
     print(request.user)

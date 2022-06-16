@@ -5,6 +5,13 @@
   <title>Template base</title>
 </head>
 <body>
+  <h1>
+    user: 
+    {{ request.user }}
+    ...
+    registrado:
+    {{ request.user.is_authenticated }}
+  </h1>
  <h1>Hola mundo con Django, Plantilla base</h1> 
 </body>
 </html>

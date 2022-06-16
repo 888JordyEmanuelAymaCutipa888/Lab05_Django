@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from inicio.views import myHomeView
+from inicio.views import argumentsView 
 
 urlpatterns = [
+    path('argumentsView/', argumentsView, name='argumentsView'),
     path('', myHomeView, name='Página de Inicio'),
     path('admin/', admin.site.urls),
 ]

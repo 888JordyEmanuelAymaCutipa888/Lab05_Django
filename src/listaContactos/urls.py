@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from inicio.views import myHomeView
 from inicio.views import argumentsView 
+from inicio.views import plantilla
 
 urlpatterns = [
+    path('plantilla/', plantilla, name='plantilla'),
     path('argumentsView/', argumentsView, name='argumentsView'),
     path('', myHomeView, name='Página de Inicio'),
     path('admin/', admin.site.urls),

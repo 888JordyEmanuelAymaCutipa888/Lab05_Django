@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.short import render
+from django.shortcuts import render
 
 # Create your views here.
 def plantilla(request, *args, **kwargs):

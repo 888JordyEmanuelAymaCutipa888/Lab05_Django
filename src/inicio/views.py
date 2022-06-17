@@ -9,6 +9,7 @@ def usoContexto(request, *args, **kwargs):
     myContext = {
             'myText': 'mi texto',
             'myNumber': 76,
+            'myList': [33,44,55,66,77, "Jordy"],
             }
     return render(request, 'usoContexto.html', myContext)
 

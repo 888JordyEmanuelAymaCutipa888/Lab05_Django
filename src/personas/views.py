@@ -5,6 +5,10 @@ from .models import Persona
 def personaCreateView(request):
     print('GET: ', request.GET)
     print('POST: ', request.POST)
+    print(request)
+    if request.method == 'POST':
+        nombre = request.POST.get('q')
+        print("name: "+nombre)
     context = {}
     return render(request, 'personas/personasCreate.html', context)
 

@@ -6,6 +6,14 @@
   {{myNumber}}
   </p>
   {% for myItem in myList %}
-  <li>{{forloop.counter}}-{{myItem}}</li>
+  <li>{{forloop.counter}}-{{myItem}}
+    {% if myItem == 55 %}
+      -Es un numero especial
+    {% elif myItem > 55 %}
+      -es mayor que 55
+    {% else %}
+      -No hay nada en especial
+    {% endif %}
+  </li>
   {% endfor %}
 {% endblock %}

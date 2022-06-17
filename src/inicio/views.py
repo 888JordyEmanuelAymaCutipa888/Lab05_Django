@@ -3,6 +3,15 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
+def usoContexto(request, *args, **kwargs):
+    print(args, kwargs)
+    print(request.user)
+    myContext = {
+            'myText': 'mi texto',
+            'myNumber': 76,
+            }
+    return render(request, 'usoContexto.html', myContext)
+
 
 def usoPlantilla(request, *args, **kwargs):
     print(args, kwargs)

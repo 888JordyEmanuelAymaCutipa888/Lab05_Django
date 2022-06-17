@@ -1,12 +1,13 @@
 {% extends "home.html" %}
 
-{% block content %s}
+{% block content %}
 <h4>{{objeto.nombres}}</h4>
-<h3>
-  {% if objeto.edad > 48%}
-   debe cuidarse 
+<h4>{{objeto.edad}}</h4>
+<em>
+  {% if objeto.edad > 48 %}
+  debe cuidarse 
   {% else %}
-    puede comer lo que desee
+  puede comer lo que desee
   {% endif %}
-</h3>
+</em>
 {% endblock %}

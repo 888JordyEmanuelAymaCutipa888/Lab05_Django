@@ -13,5 +13,12 @@
     {{ request.user.is_authenticated }}
   </h1>
  <h1>Hola mundo con Django, Plantilla base</h1> 
+ {% block content %}
+    remplazar aqui...
+ {% endblock %}
+
+ {% block block2 %}
+    remplazar...
+ {% endblock %}
 </body>
 </html>

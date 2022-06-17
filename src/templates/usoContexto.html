@@ -6,6 +6,6 @@
   {{myNumber}}
   </p>
   {% for myItem in myList %}
-  <li>{{myItem}}</li>
+  <li>{{forloop.counter}}-{{myItem}}</li>
   {% endfor %}
 {% endblock %}

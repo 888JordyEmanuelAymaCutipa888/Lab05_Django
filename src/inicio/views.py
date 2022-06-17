@@ -3,6 +3,16 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
+def home2(request, *args, **kwargs):
+    print(args, kwargs)
+    print(request.user)
+    myContext = {
+            'myText': 'mi texto',
+            'myNumber': 76,
+            'myList': [33,44,55,66,77, "Jordy"],
+            }
+    return render(request, 'home2.html', myContext)
+
 def usoContexto(request, *args, **kwargs):
     print(args, kwargs)
     print(request.user)

@@ -20,9 +20,10 @@ from inicio.views import argumentsView
 from inicio.views import plantilla
 from inicio.views import usoPlantilla 
 from inicio.views import usoContexto
+from inicio.views import home2 
 
 urlpatterns = [
-    path('usoContexto/', usoContexto, name='usoContexto'),
+    path('home2/', home2, name='home'),
     path('usoPlantilla/', usoPlantilla, name='usoPlantilla'),
     path('plantilla/', plantilla, name='plantilla'),
     path('argumentsView/', argumentsView, name='argumentsView'),

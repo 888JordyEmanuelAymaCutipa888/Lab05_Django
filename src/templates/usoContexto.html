@@ -2,8 +2,13 @@
 
 {% block content %}
   <p>
-  {{myText}}
-  {{myNumber}}
+  {{myText|upper|truncatechars:"5"}}<br>
+  {{myText|upper}}<br>
+  {{myText}}<br>
+  {{myNumber}}<br>
+  {% filter force_escape|lower %}
+    MAYUSCULAS
+  {% endfilter %}
   </p>
   {% for myItem in myList %}
   <li>{{forloop.counter}}-{{myItem}}

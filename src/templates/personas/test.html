@@ -1,0 +1,12 @@
+{% extends "home.html" %}
+
+{% block content %}
+<h4>{{nombre}}</h4>
+<h3>
+  {% if edad > 48%}
+   debe cuidarse 
+  {% else %}
+    puede comer lo que desee
+  {% endif %}
+</h3>
+{% endblock %}

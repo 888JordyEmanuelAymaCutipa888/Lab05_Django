@@ -1,9 +1,9 @@
 {% extends "home.html" %}
 
-{% block content %}
-<h4>{{nombre}}</h4>
+{% block content %s}
+<h4>{{objeto.nombres}}</h4>
 <h3>
-  {% if edad > 48%}
+  {% if objeto.edad > 48%}
    debe cuidarse 
   {% else %}
     puede comer lo que desee

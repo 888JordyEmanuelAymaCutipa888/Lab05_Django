@@ -18,8 +18,10 @@ from django.urls import path
 from inicio.views import myHomeView
 from inicio.views import argumentsView 
 from inicio.views import plantilla
+from inicio.views import usoPlantilla 
 
 urlpatterns = [
+    path('usoPlantilla/', usoPlantilla, name='usoPlantilla'),
     path('plantilla/', plantilla, name='plantilla'),
     path('argumentsView/', argumentsView, name='argumentsView'),
     path('', myHomeView, name='Página de Inicio'),

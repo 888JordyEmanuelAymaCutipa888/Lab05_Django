@@ -3,6 +3,12 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
+
+def usoPlantilla(request, *args, **kwargs):
+    print(args, kwargs)
+    print(request.user)
+    return render(request, 'usoPlantilla.html', {})
+
 def plantilla(request, *args, **kwargs):
     print(args, kwargs)
     print(request.user)

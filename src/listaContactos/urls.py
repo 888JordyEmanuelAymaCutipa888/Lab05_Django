@@ -23,8 +23,10 @@ from inicio.views import usoContexto
 from inicio.views import home2 
 from personas.views import personaTestView 
 from personas.views import searchForHelp 
+from personas.views import personaCreateView 
 
 urlpatterns = [
+    path('create/', personaCreateView, name='crear'),
     path('search/', searchForHelp, name='buscar'),
     path('persona/', personaTestView, name='otro'),
     path('home2/', home2, name='home'),

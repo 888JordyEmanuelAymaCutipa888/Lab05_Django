@@ -1,0 +1,43 @@
+ {% extends 'home.html' %}
+  
+  {% block content %}
++   <p>------------------------------------------------------------</p>
++   <em>PRIMER BLOQUE</em>
+    <p>
+    {{myText|upper|truncatechars:"5"}}<br>
+    {{myText|upper}}<br>
+    {{myText}}<br>
+    {{myNumber}}<br>
+    {% filter force_escape|lower %}
+      MAYUSCULAS
+    {% endfilter %}
+    </p>
+    {% for myItem in myList %}
+    <li>{{forloop.counter}}-{{myItem}}
+      {% if myItem == 55 %}
+        -Es un numero especial
+      {% elif myItem > 55 %}
+        -es mayor que 55
+      {% else %}
+        -No hay nada en especial
+      {% endif %}
+    </li>
+    {% endfor %}
++   <p>------------------------------------------------------------</p>
++     <br>
++     <br>
++ {% endblock %}
++ 
++ {% block block2 %}
++   <p>------------------------------------------------------------</p>
++   <em>
++   SEGUNDO BLOQUE
++   <br>
++   <br>
++   aquí se esta usando include
++   {% include 'nav.html' %}
++   </em>
++   <p>------------------------------------------------------------</p>
+  {% endblock %}
+~
+
